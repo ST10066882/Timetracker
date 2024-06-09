@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewPageHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Hours by Category"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Date Range Picker Button -->
+    <Button
+        android:id="@+id/buttonDateRangePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date Range"
+        android:layout_marginTop="65dp"
+        android:backgroundTint="@color/material_dynamic_tertiary30"
+        android:layout_centerHorizontal="true" />
+
+    <!-- TextView to display no records message -->
+    <TextView
+        android:id="@+id/textViewNoRecords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No records to display"
+        android:visibility="gone"
+        android:layout_below="@id/buttonDateRangePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- RecyclerView for displaying total hours per category -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTotalHours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonDateRangePicker"
+        android:layout_marginTop="16dp" />
+    <!-- ProgressBar for loading animation -->
+    <ProgressBar
+        android:id="@+id/progressBarLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Back" />
+</RelativeLayout>

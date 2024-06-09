@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TimeVision"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Envision The Future, One Tick at a Time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Image Buttons -->
+        <GridLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:rowCount="1"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5"
+            android:layout_marginTop="16dp">
+
+            <!-- Category Page Button and Caption -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <!-- Category Page Button -->
+                <ImageButton
+                    android:id="@+id/categoryButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/category"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+
+                <!-- Category Page Caption -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:layout_below="@id/categoryButton"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <!-- Timesheet Entry Page Button and Caption -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <!-- Timesheet Entry Page Button -->
+                <ImageButton
+                    android:id="@+id/timesheetEntryButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/timesheet"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+
+                <!-- Timesheet Entry Page Caption -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Timesheet Entry"
+                    android:layout_below="@id/timesheetEntryButton"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <!-- Daily Goal Page Button and Caption -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <!-- Daily Goal Page Button -->
+                <ImageButton
+                    android:id="@+id/dailyGoalButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/daily_goals"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+
+                <!-- Daily Goal Page Caption -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Goals"
+                    android:layout_below="@id/dailyGoalButton"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <!-- View Total Hours Page Button and Caption -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <!-- View Total Hours Page Button -->
+                <ImageButton
+                    android:id="@+id/viewTotalHoursButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/view_total_hours"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+
+                <!-- View Total Hours Page Caption -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Total Hours"
+                    android:layout_below="@id/viewTotalHoursButton"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <!-- Graph Page Button and Caption -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <!-- Graph Page Button -->
+                <ImageButton
+                    android:id="@+id/graphButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/graph_image"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+
+                <!-- Graph Page Caption -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Graph"
+                    android:layout_below="@id/graphButton"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/nav_header" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

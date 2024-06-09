@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "257754593216",
+    "project_id": "timewise-71cd2",
+    "storage_bucket": "timewise-71cd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257754593216:android:e4c60ca16bd78f7045ba25",
+        "android_client_info": {
+          "package_name": "com.example.mytrackerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-eQ2MLGh78p_j7eQQcN4emEipzuciZHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
